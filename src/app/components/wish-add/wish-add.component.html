@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header bg-info text-white">
+    <h5>Add a new product (Reactiv)</h5>
+  </div>
+  <div class="card-body d-flex justify-content-center">
+    <form class="col-md-6" [formGroup]="wishForm" (ngSubmit)="addWish()">
+
+      <div class="mb-3">
+        <label for="titre" class="form-label">Titre</label>
+        <input type="text" formControlName="titre" class="form-control" id="titre">
+      </div>
+
+      <div class="mb-3">
+        <label for="marque" class="form-label">Marque</label>
+        <input type="text" formControlName="marque" class="form-control" id="marque">
+      </div>
+
+      <div class="mb-3">
+        <label for="lien" class="form-label">Lien</label>
+        <input type="text" formControlName="lien" class="form-control" id="lien">
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input type="text" formControlName="image" class="form-control" id="image">
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" [disabled]="wishForm.invalid" class="btn btn-outline-success">Ajouter</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="card-footer text-muted">
+    <div class="alert alert-danger" *ngIf="wishForm.get('productId')?.touched && wishForm.get('productId')?.invalid">The ID is required !</div>
+    <div class="alert alert-danger" *ngIf="wishForm.get('productTitle')?.touched && wishForm.get('productTitle')?.invalid">The title is required and substring up to 5 caract.</div>
+    <div class="alert alert-danger" *ngIf="wishForm.get('unitPrice')?.touched && wishForm.get('unitPrice')?.invalid">The ID is required !</div>
+  </div>
+</div>

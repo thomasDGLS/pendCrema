@@ -1,0 +1,31 @@
+<nav class="navbar sticky-top navbar-expand-xl " style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">ProductsApp</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products']" routerLinkActive="[active]"  aria-current="page">Catalogue <span class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/wish']" routerLinkActive="[active]" >Liste de souhait</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/addProduct']" routerLinkActive="[active]" >Add product</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav me-2 mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/products']" routerLinkActive="[active]"  aria-current="page">
+            <i class="bi bi-cart3"></i>
+            <span class="badge bg-success position-absolute top-10 translate-middle badge rounded-pill"> {{countBadge}} </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

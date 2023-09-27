@@ -13,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductsPromotionsComponent } from './components/products-promotions/products-promotions.component';
 import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
-import { ProductsAddComponent } from './components/products-add/products-add.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { WishAddComponent } from './components/wish-add/wish-add.component';
 
@@ -25,7 +24,6 @@ import { WishAddComponent } from './components/wish-add/wish-add.component';
     ProductsListComponent,
     ProductsPromotionsComponent,
     ProductsDetailComponent,
-    ProductsAddComponent,
     WishListComponent,
     WishAddComponent
   ],

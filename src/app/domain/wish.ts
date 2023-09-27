@@ -4,4 +4,5 @@ export interface Wish {
   marque?: string;
   lien?: string;
   image?:string;
+  isReserve:boolean;
 }

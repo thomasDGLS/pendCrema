@@ -31,9 +31,10 @@
 
     </form>
   </div>
-  <div class="card-footer text-muted">
-    <div class="alert alert-danger" *ngIf="wishForm.get('productId')?.touched && wishForm.get('productId')?.invalid">The ID is required !</div>
-    <div class="alert alert-danger" *ngIf="wishForm.get('productTitle')?.touched && wishForm.get('productTitle')?.invalid">The title is required and substring up to 5 caract.</div>
-    <div class="alert alert-danger" *ngIf="wishForm.get('unitPrice')?.touched && wishForm.get('unitPrice')?.invalid">The ID is required !</div>
+  <div *ngIf="wishForm.invalid && wishForm.touched" class="card-footer text-muted text-center">
+    <div class="alert alert-danger w-50 m-auto" *ngIf="wishForm.get('titre')?.touched && wishForm.get('titre')?.invalid">Un titre est requis.</div>
+    <div class="alert alert-danger w-50 m-auto" *ngIf="wishForm.get('marque')?.touched && wishForm.get('marque')?.invalid">Pas de marques 😔</div>
+    <div class="alert alert-danger w-50 m-auto" *ngIf="wishForm.controls.image.touched && wishForm.controls.image.errors?.['required']">Un URL est requis.</div>
+    <div class="alert alert-danger w-50 m-auto" *ngIf="wishForm.controls.image.touched && wishForm.controls.image.errors?.['pattern']">Encodez un URL valide.</div>
   </div>
 </div>
